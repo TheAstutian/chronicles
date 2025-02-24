@@ -20,7 +20,9 @@ const navigate = useNavigate()
 
 const handleChange = e =>{
     setInputs(prev=>({...prev, [e.target.name]: e.target.value.toLowerCase()}))
-   
+    if(errorMessage!==""){
+        setErrorMessage("")
+    }
 }
 
 const checkHandler = ()=>{
@@ -41,19 +43,25 @@ const handleSubmit = async e =>{
     } else{
        try{
        const res = await axios.post(`${API_URL}/signup`, {inputs})
-        if(res.data.status==="SUCCESS"){    
-        alert('Registrationsuccessful')
+       
+        if(res.data && res.data.status==="SUCCESS"){    
+        alert('Registration successful')
         navigate('/oykk')
-        } else if(res.data.status==="FAILED") {
+        } else if (res.data && res.data.message){
             setErrorMessage(res.data.message)
         }
 
        }catch(err){
-        console.log(err.response.data)
-       setErrorMessage(err.response.data)
+        console.log(err)
+       
        }
     }
     
+    /* if (res.data && res.data.status === "SUCCESS") { // Check if res.data exists
+    alert('Registration successful');
+    navigate('/oykk');
+  } else if (res.data && res.data.message) {  // Check if res.data and message exist
+    setErrorMessage(res.data.message);/*/
 }
 
     return (
