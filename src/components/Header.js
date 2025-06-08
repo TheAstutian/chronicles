@@ -10,7 +10,7 @@ const Header = () => {
   return (
     <div  className='bg-secondary relative'>
         <div className='p-1 '>
-        <h1 className='text-text text-left md:text-center pl-2 text-xl md:text-3xl font-semibold'><Link to='/'>Oyin's Chronicles</Link></h1>
+        <h1 className='text-text text-left md:text-center pl-2 text-xl md:text-3xl font-semibold'><Link to='/'>Precious' Chronicles</Link></h1>
         </div>
         <div className=' absolute top-2 right-1 md:right-5'>
             {currentUser? 
