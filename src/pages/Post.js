@@ -69,7 +69,7 @@ const navigate = useNavigate()
           </>: 
           <></>}
           </div>
-          <div className='px-1 md:my-5 md:px-5 mx-auto'>
+          <div className='px-3 my-3 md:my-5 md:px-5 mx-auto'>
           < section className='text-left text-md '>{parse(post.content)}</section>
           </div>
 

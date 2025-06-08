@@ -37,7 +37,7 @@ useEffect( ()=>{
         <div className='flex flex-col bg-white sm:flex-row'>
             <div className='sm:basis-4/5 bg-background mx-2 sm:pt-10'>
                 {/*<h2 className='font-bold text-lg sm:text-2xl md:text-3xl lg:text-4xl'>Latest Entries </h2>*/}
-                <div className='sm:p-2 sm:pl-20 sm:pr-20 mt-5 mx-10 '>
+                <div className='sm:p-2 sm:pl-20 sm:pr-20 mt-5 mx-2 md:mx-10 '>
 
                     {database? (
                              database.map((item)=>(
